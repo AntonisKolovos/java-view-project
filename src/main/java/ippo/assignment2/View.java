@@ -6,13 +6,11 @@ import java.util.concurrent.Phaser;
 public class View {
     private int direction;
     private Image view;
-    private boolean hasExit;
     private String nextLocation;
 
-    public View(int direction, Image view, boolean exit, String nextLocation){
+    public View(int direction, Image view, String nextLocation){
         this.direction=direction;
         this.view=view;
-        this.hasExit= hasExit;
         this.nextLocation=nextLocation;
     }
 
@@ -22,10 +20,6 @@ public class View {
 
     public int getDirection() {
         return direction;
-    }
-
-    public boolean hasExit() {
-        return hasExit;
     }
 
     public String getNextLocation() {

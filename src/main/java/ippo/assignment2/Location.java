@@ -46,11 +46,5 @@ public class Location {
         return views.get(direction).getNextLocation();
     }
 
-    public boolean hasExit(int direction){
-        return views.get(direction).hasExit();
-
-    }
-
-
 
 }

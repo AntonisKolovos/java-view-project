@@ -7,12 +7,15 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 
 public class WorldController {
+    @FXML
+    private Pane itemPane;
     @FXML
     private Menu pickupMenu;
 
@@ -84,6 +87,7 @@ public class WorldController {
 
     public void setLocationItems(){
         pickupMenu.getItems().clear();
+        itemPane.getChildren().clear();
         locationItems=world.getLocationItems();
         for(Item item:locationItems){
             MenuItem menuItem = new MenuItem(item.getName());
@@ -91,6 +95,8 @@ public class WorldController {
                 pickItem(item);
             });
             pickupMenu.getItems().add(menuItem);
+            ImageView itemView = new ImageView(item.getIcon());
+            itemPane.getChildren().add(itemView);
         }
     }
 

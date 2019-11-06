@@ -12,10 +12,12 @@ public class Player {
     public Player(String location,int direction){
         this.currentDirection=direction;
         this.currentLocation=location;
-        Item item = new Item(null,"Pen");
-        itemList.add(item);
+        Image icon = new Image("Pen.png");
 
-        item = new Item(null,"Cup");
+        Item item = new Item(icon,"Pen");
+        itemList.add(item);
+        icon = new Image("Cup.png");
+        item = new Item(icon,"Cup");
         itemList.add(item);
 
 

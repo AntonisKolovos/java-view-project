@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ippo.assignment2.WorldController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="599.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ippo.assignment2.WorldController">
   <children>
     <Button id="Forward" fx:id="buttonForward" maxWidth="50.0" mnemonicParsing="false" onAction="#goForward" prefHeight="33.0" prefWidth="43.0" text="Up" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0" />
     <Button id="Left" fx:id="buttonLeft" mnemonicParsing="false" onAction="#turnLeft" prefWidth="60.0" text="Left" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="200.0" />
@@ -19,5 +19,6 @@
         <Menu mnemonicParsing="false" text="Drop" fx:id="dropMenu" />
       </menus>
     </MenuBar>
+    <Pane fx:id="itemPane" prefHeight="120.0" prefWidth="576.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
   </children>
 </AnchorPane>

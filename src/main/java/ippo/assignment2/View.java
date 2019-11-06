@@ -1,6 +1,8 @@
 package ippo.assignment2;
 
 import javafx.scene.image.Image;
+
+import java.util.HashMap;
 import java.util.concurrent.Phaser;
 
 public class View {
@@ -26,8 +28,4 @@ public class View {
         return nextLocation;
     }
 
-
-    public void setView(Image view) {
-        this.view = view;
-    }
 }

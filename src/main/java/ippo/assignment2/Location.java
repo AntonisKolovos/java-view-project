@@ -2,11 +2,13 @@ package ippo.assignment2;
 
 import javafx.scene.image.Image;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Location {
     private String name ;
     private ArrayList<View> views= new ArrayList<View>(4);
     private int noDirections;
+    private ArrayList<Item> itemList = new ArrayList<Item>();
 
     public Location(String name,int noDirections){
         this.name=name;
@@ -44,6 +46,19 @@ public class Location {
 
     public String getNextLocation(int direction){
         return views.get(direction).getNextLocation();
+    }
+
+    public ArrayList<Item> getItemList(){
+        return itemList;
+    }
+
+    public void addItem(Item item){
+        itemList.add(item);
+
+    }
+
+    public void removeItem(Item item) {
+        itemList.remove(item);
     }
 
 

@@ -1,12 +1,15 @@
 package ippo.assignment2;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
 import javafx.scene.image.Image;
 
 
 public class World {
-    HashMap<String,Location> locations = new HashMap<String,Location>();
-    Player player ;
+    private HashMap<String,Location> locations = new HashMap<String,Location>();
+    private Player player ;
 
 
 
@@ -52,8 +55,6 @@ public class World {
             String nextLocation=locations.get(player.getCurrentLocation()).getNextLocation(player.getCurrentDirection());
             player.setCurrentLocation(nextLocation);
 
-        }else{
-            System.out.println("No exit!");
         }
 
 
@@ -72,6 +73,34 @@ public class World {
             return false ;
         }
     }
+
+    public void pickItem(Item item){
+        player.addItem(item);
+        locations.get(player.getCurrentLocation()).removeItem(item);
+    }
+
+    public void dropItem(Item item){
+        player.dropItem(item);
+        locations.get(player.getCurrentLocation()).addItem(item);
+    }
+
+    public ArrayList<Item> getLocationItems(){
+
+        return locations.get(player.getCurrentLocation()).getItemList();
+
+
+    }
+
+    public ArrayList<Item> getPlayerItems(){
+
+        return player.getItems();
+
+    }
+
+
+
+
+
 
 
 }

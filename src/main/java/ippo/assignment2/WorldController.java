@@ -89,14 +89,18 @@ public class WorldController {
         pickupMenu.getItems().clear();
         itemPane.getChildren().clear();
         locationItems=world.getLocationItems();
+        int i=1;
         for(Item item:locationItems){
+
             MenuItem menuItem = new MenuItem(item.getName());
             menuItem.setOnAction(event -> {
                 pickItem(item);
             });
             pickupMenu.getItems().add(menuItem);
             ImageView itemView = new ImageView(item.getIcon());
+            itemView.relocate(30+i,10);
             itemPane.getChildren().add(itemView);
+            i+=100;
         }
     }
 

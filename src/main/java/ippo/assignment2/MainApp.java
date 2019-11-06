@@ -16,7 +16,7 @@ public class MainApp extends Application {
 
         try {
 
-            String viewerFxml = "/GUI2.fxml";
+            String viewerFxml = "/GUI.fxml";
             FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource(viewerFxml));
             AnchorPane page = (AnchorPane) fxmlLoader.load();
             Scene scene = new Scene(page);

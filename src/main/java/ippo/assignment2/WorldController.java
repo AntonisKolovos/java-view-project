@@ -63,7 +63,7 @@ public class WorldController {
         else {
             buttonForward.setDisable(false);
         }
-        Image image = world.getViewImage();
+        Image image = world.getDirectionImage();
         mainView.setImage(image);
 
         this.setLocationItems();

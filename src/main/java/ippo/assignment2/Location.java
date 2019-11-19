@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Location {
     private String name ;
-    private ArrayList<View> views= new ArrayList<View>(4);
+    private ArrayList<Direction> views= new ArrayList<Direction>(4);
     private int noDirections;
     private ArrayList<Item> itemList = new ArrayList<Item>();
 
@@ -26,12 +26,12 @@ public class Location {
         this.noDirections = noDirections;
     }
 
-    public void addView(View newView){
-        views.add(newView.getDirection(), newView);
+    public void addDirection(Direction newDirection){
+        views.add(newDirection.getDirection(), newDirection);
 
     }
 
-    public Image getViewImage(int direction){
+    public Image getDirectionImage(int direction){
         return views.get(direction).getView();
     }
 

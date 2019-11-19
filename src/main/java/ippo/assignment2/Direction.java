@@ -5,12 +5,12 @@ import javafx.scene.image.Image;
 import java.util.HashMap;
 import java.util.concurrent.Phaser;
 
-public class View {
+public class Direction {
     private int direction;
     private Image view;
     private String nextLocation;
 
-    public View(int direction, Image view, String nextLocation){
+    public Direction(int direction, Image view, String nextLocation){
         this.direction=direction;
         this.view=view;
         this.nextLocation=nextLocation;

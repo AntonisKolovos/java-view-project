@@ -20,6 +20,10 @@ public class Player {
         item = new Item(icon,"Cup");
         itemList.add(item);
 
+        icon = new Image("cat.png");
+        item= new Item(icon,"Cat");
+        itemList.add(item);
+
 
 
     }

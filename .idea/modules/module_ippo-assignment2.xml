@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_ippo-assignment2" default="compile.module.ippo-assignment2">
+  <dirname property="module.ippo-assignment2.basedir" file="${ant.file.module_ippo-assignment2}"/>
+  
+  <property name="module.jdk.home.ippo-assignment2" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.ippo-assignment2" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.ippo-assignment2" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.ippo-assignment2" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="ippo-assignment2.output.dir" value="undefined"/>
+  <property name="ippo-assignment2.testoutput.dir" value="undefined"/>
+  
+  <path id="ippo-assignment2.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="ippo-assignment2.module.production.classpath">
+    <path refid="${module.jdk.classpath.ippo-assignment2}"/>
+  </path>
+  
+  <path id="ippo-assignment2.runtime.production.module.classpath"/>
+  
+  <path id="ippo-assignment2.module.classpath">
+    <path refid="${module.jdk.classpath.ippo-assignment2}"/>
+  </path>
+  
+  <path id="ippo-assignment2.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.ippo-assignment2">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.ippo-assignment2">
+    <patternset refid="excluded.from.module.ippo-assignment2"/>
+  </patternset>
+  
+  
+  <target name="compile.module.ippo-assignment2" depends="compile.module.ippo-assignment2.production,compile.module.ippo-assignment2.tests" description="Compile module ippo-assignment2"/>
+  
+  <target name="compile.module.ippo-assignment2.production" depends="register.custom.compilers" description="Compile module ippo-assignment2; production classes"/>
+  
+  <target name="compile.module.ippo-assignment2.tests" depends="register.custom.compilers,compile.module.ippo-assignment2.production" description="compile module ippo-assignment2; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.ippo-assignment2" description="cleanup module">
+    <delete dir="${ippo-assignment2.output.dir}"/>
+    <delete dir="${ippo-assignment2.testoutput.dir}"/>
+  </target>
+</project>
